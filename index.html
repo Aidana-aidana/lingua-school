@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingua School - Online Educational Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        header,
+        footer {
+            background-color: #00bfa6;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: inline-block;
+            margin-left: 2cm;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-color: #e8f6f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+
+        .hero select,
+        .hero .cta-button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .hero .cta-button {
+            background-color: #ff6b6b;
+            color: white;
+            cursor: pointer;
+        }
+
+        .features,
+        .achievements,
+        .testimonials,
+        .info,
+        .call-to-action {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .features .feature,
+        .testimonials .testimonial,
+        .info .detail {
+            margin: 20px;
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+        }
+
+        .achievements p,
+        .testimonials p,
+        .info p {
+            font-size: 18px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .image-container {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Popup form styles */
+        .popup-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            z-index: 2;
+            width: 300px;
+            text-align: center;
+        }
+
+        .popup-form h2 {
+            margin-top: 0;
+        }
+
+        .popup-form label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        .popup-form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .popup-form button {
+            padding: 10px 20px;
+            background-color: #00bfa6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .popup-form button.close {
+            background-color: #ff6b6b;
+        }
+
+        /* Overlay styles */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">How it Works</a>
+            <a href="#">Reviews</a>
+            <a href="#">Live Lessons</a>
+            <a href="#">Pricing</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Lingua brings language learning</h1>
+        <p>Learn a language right here with hundreds of free language-learning lessons.</p>
+        <select>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <!-- More languages -->
+        </select>
+        <button class="cta-button" id="startLearningBtn">Start Learning</button>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <div class="image-container">
+                <img src="236-2367537_teacher-animation-school-education-cartoon-teacher-cartoon-png.png"
+                    alt="Real Conversations">
+            </div>
+            <h2>Real Conversations</h2>
+            <p>Engage in real conversations to practice your language skills.</p>
+        </div>
+        <div class="feature">
+            <div class="image-container">
+                <img src="c33c499ac84e8b5c424916765c913d6e.jpg" alt="Grammar Lessons">
+            </div>
+            <h2>Grammar Lessons</h2>
+            <p>Understand the structure and rules of the language.</p>
+        </div>
+        <div class="feature">
+            <div class="image-container">
+                <img src="large-imposing-red-brick-school-260nw-144518615.jpg.webp" alt="Daily Lessons">
+            </div>
+            <h2>Daily Lessons</h2>
+            <p>Practice daily to improve consistently.</p>
+        </div>
+    </div>
+
+    <div class="achievements">
+        <h2>Our Achievements</h2>
+        <p>70,000 lessons taught | 40,000+ students enrolled | 11 languages</p>
+        <div class="image-container">
+            <img src="boy-girl-on-school-bus-waving-animated.gif" alt="Achievements">
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="6768b830013de9237180cb5a8fe6afdc.jpg" alt="Student A">
+            </div>
+            <p>"Amazing platform! I learned so much."</p>
+            <p>- Student A</p>
+        </div>
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="Happy-cartoon-student-High-education-gr-Graphics-69390525-1-1-580x387.png" alt="Student B">
+            </div>
+            <p>"The lessons are very engaging and easy to follow."</p>
+            <p>- Student B</p>
+        </div>
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="illustration-of-children-education-concept-vector.jpg" alt="Student C">
+            </div>
+            <p>"Best online learning experience I've ever had!"</p>
+            <p>- Student C</p>
+        </div>
+    </div>
+
+    <div class="info">
+        <h2>Changing the way people learn new languages</h2>
+        <div class="detail">
+            <div class="image-container">
+                <img src="Best-Free-Education-Animation-Software-for-Teachers-to-Create-Animated-Learning-Videos.webp"
+                    alt="Language Combinations">
+            </div>
+            <h3>1000+ Language Combinations</h3>
+            <p>Learn from any native language you prefer.</p>
+        </div>
+        <div class="detail">
+            <div class="image-container">
+                <img src="c33c499ac84e8b5c424916765c913d6e.jpg" alt="50 Topics">
+            </div>
+            <h3>50 Topics</h3>
+            <p>Prepare for the most common real-world situations.</p>
+        </div>
+        <div class="detail">
+            <div class="image-container">
+                <img src="236-2367537_teacher-animation-school-education-cartoon-png.png" alt="Vocabulary Builders">
+            </div>
+            <h3>36 Vocabulary Builders</h3>
+            <p>Build your vocabulary quickly and effectively.</p>
+        </div>
+    </div>
+
+    <div class="call-to-action">
+        <h2>Thinking about starting your learning journey?</h2>
+
+        <div class="image-container">
+            <img src="6768b830013de9237180cb5a8fe6afdc.jpg" alt="Learning Journey">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Lingua School. All rights reserved.</p>
+        <p>Contact us: email@example.com | 123-456-7890</p>
+        <p>Follow us: Facebook | Twitter | LinkedIn</p>
+    </footer>
+
+    <!-- Popup Form -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup-form" id="popupForm">
+        <h2>Contact Us</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+        <button type="submit">Submit</button>
+        <button type="button" class="close" id="closeBtn">Close</button>
+    </div>
+
+    <script>
+        document.getElementById('startLearningBtn').addEventListener('click', function () {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popupForm').style.display = 'block';
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', function () {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popupForm').style.display = 'none';
+        });
+
+        document.getElementById('overlay').addEventListener('click', function () {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popupForm').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
